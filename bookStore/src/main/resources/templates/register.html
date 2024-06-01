@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.com">
+<head>
+    <!-- Penambahan tag <head> di sini -->
+</head>
+<body>
+    <!-- Penambahan tag <body> di sini -->
+    <div class="container my-5 p-5" style="border:1px solid black;">
+        <h4 class="text-center">New User Registration</h4>
+        <form class="col-md-4 offset-md-4" th:action="@{/register}" method="post">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" name="name">    
+            </div>
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" name="username">    
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" name="password">    
+            </div>
+            <div class="mb-3">
+                <label for="notelp" class="form-label">Phone Number</label>
+                <input type="text" class="form-control" name="notelp">    
+            </div>
+            <center><button type="submit" class="btn btn-primary">Register</button></center>
+        </form>
+    </div>
+    <!-- Penambahan tag <script> di sini -->
+</body>
+</html>
