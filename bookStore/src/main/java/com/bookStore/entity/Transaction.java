@@ -11,20 +11,20 @@ public class Transaction {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
-    private String buyerName;
+    private String buyer_name;
     private String email;
     private String address;
-    private String phoneNumber;
+    private String phone_number;
     private int quantity;
     private double totalPrice;
     private int book_id;
-	public Transaction(int id, String buyerName, String email, String address, String phoneNumber, int quantity, double totalPrice, int book_id) {
+	public Transaction(int id, String buyer_name, String email, String address, String phone_number, int quantity, double totalPrice, int book_id) {
 		super();
 		this.id = id;
-		this.buyerName = buyerName;
+		this.buyer_name = buyer_name;
 		this.email = email;
 		this.address = address;
-		this.phoneNumber = phoneNumber;
+		this.phone_number = phone_number;
 		this.quantity = quantity;
 		this.totalPrice = totalPrice;
 		this.book_id = book_id;
@@ -39,12 +39,13 @@ public class Transaction {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getbuyerName() {
-		return buyerName;
-	}
-	public void setbuyerName(String buyerName) {
-		this.buyerName = buyerName;
-	}
+	public String getBuyer_name() {
+        return buyer_name;
+    }
+
+    public void setBuyer_name(String buyer_name) {
+        this.buyer_name = buyer_name;
+    }
 	public String getEmail() {
 		return email;
 	}
@@ -57,28 +58,32 @@ public class Transaction {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public String getphoneNumber() {
-		return phoneNumber;
-	}
-	public void setphoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
-	}
+	public String getPhone_number() {
+        return phone_number;
+    }
+
+    public void setPhone_number(String phone_number) {
+        this.phone_number = phone_number;
+    }
 	public int getQuantity() {
 		return quantity;
 	}
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-	public Double gettotalPrice() {
-		return totalPrice;
-	}
-	public void settotalPrice(Double totalPrice) {
-		this.totalPrice = totalPrice;
-	}
-	public int getbookId() {
-		return book_id;
-	}
-	public void setbookId(int book_id) {
-		this.book_id = book_id;
-	}
+	public Double getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(Double totalPrice) {
+        this.totalPrice = totalPrice;
+    }
+
+    public int getBook_id() {
+        return book_id;
+    }
+
+    public void setBook_id(int book_id) {
+        this.book_id = book_id;
+    }
 }

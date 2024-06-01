@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
+
 import java.util.*;
 @Controller
 public class TransactionController {
@@ -28,6 +30,11 @@ public class TransactionController {
         model.addAttribute("books", books);
         return "createTransaction";
     }
-
+    @GetMapping("/datatransactions")
+    public ModelAndView getAllTransactions() {
+        List<Transaction> list = transactionService.getAllTransactions();
+        return new ModelAndView("transactionList","transactions",list);
+    }
+    
 
 }
