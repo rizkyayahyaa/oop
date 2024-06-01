@@ -13,7 +13,10 @@ public class UserService {
     
     @Autowired
     private UserRepository userRepository;
-    
+    public boolean authenticate(String username, String password) {
+        User user = userRepository.findByUsernameAndPassword(username, password);
+        return user != null;
+    }
     public void save(User user) {
         userRepository.save(user);
     }

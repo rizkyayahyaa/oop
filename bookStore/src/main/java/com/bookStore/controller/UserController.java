@@ -16,12 +16,27 @@ public class UserController {
     @PostMapping("/register")
     public String registerUser(@ModelAttribute User user) {
         userService.save(user);
-        return "redirect:/"; // Ganti dengan redirect ke halaman yang sesuai
+        return "redirect:/"; 
     }
     
     @GetMapping("/register")
     public String showRegistrationForm(Model model) {
         model.addAttribute("user", new User());
         return "register";
+    }
+    @GetMapping("/login")
+    public String showLoginForm(Model model) {
+        model.addAttribute("user", new User());
+        return "login";
+    }
+
+    @PostMapping("/login")
+    public String login(@ModelAttribute User user) {
+        if (userService.authenticate(user.getUsername(), user.getPassword())) {
+            return "redirect:/"; // Redirect to home page or any other page upon successful login
+        } else {
+            // Redirect back to login page with error message
+            return "redirect:/login?error";
+        }
     }
 }
