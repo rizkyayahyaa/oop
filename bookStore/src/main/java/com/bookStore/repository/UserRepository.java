@@ -7,5 +7,5 @@ import com.bookStore.entity.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User,Integer> {
-
+    User findByUsernameAndPassword(String username, String password);
 }
