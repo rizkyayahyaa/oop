@@ -48,14 +48,14 @@
                         <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="available_books">Available Books</a>
+                        <a class="nav-link" href="available_books">Buku yg Tersedia</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="my_books">My Books</a>
+                        <a class="nav-link" href="my_books">Buku Saya</a>
                     </li>
                 </ul>
                 <div>
-                    <a class="nav-link" href="book_register">New Book Register</a>
+                    <a class="nav-link" href="book_register">Daftar Buku Barur</a>
                 </div>
             </div>
         </div>
@@ -79,8 +79,8 @@
                     <td th:text="${b.author}"></td>
                     <td th:text="${b.price}"></td>
                     <td>
-                        <a style="color:red" th:href="@{/deleteMyList/{id}(id=${b.id})}">
-                            <i class="fa-solid fa-trash"></i>
+                        <a class="btn btn-danger btn-sm" th:href="@{/deleteMyList/{id}(id=${b.id})}">
+                           Delete
                         </a>
                     </td>
                 </tr>
