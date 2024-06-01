@@ -35,6 +35,11 @@ public class TransactionController {
         List<Transaction> list = transactionService.getAllTransactions();
         return new ModelAndView("transactionList","transactions",list);
     }
+
+    @GetMapping("/home")
+    public String users() {
+        return "users";
+    }
     
 
 }
