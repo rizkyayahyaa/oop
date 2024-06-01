@@ -2,6 +2,9 @@ package com.bookStore.service;
 
 import com.bookStore.entity.Transaction;
 import com.bookStore.repository.TransactionRepository;
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,4 +20,7 @@ public class TransactionService {
     public void save(Transaction transaction) {
         transactionRepository.save(transaction);
     }
+    public List<Transaction> getAllTransactions(){
+		return transactionRepository.findAll();
+	}
 }
