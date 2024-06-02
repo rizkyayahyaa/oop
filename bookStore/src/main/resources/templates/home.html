@@ -6,10 +6,43 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Perpustakaan</title>
     <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to right, rgba(0, 123, 255, 0.7), rgba(0, 123, 255, 0.3)), url('https://source.unsplash.com/1600x900/?books,library');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding-top: 60px; /* Added padding-top to create space for navbar */
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                font-size: 1em;
+            }
+            .button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
         .navbar-custom {
             background-color: #20B2AA; /* Teal Blue color */
         }
 
+        .navbar-custom .nav-link {
+            color: white; /* Ensuring the navbar link text is white */
+        }
+        .navbar-custom .nav-link.active {
+            color: white; /* Ensuring the active navbar link text is also white */
+        }
         .container {
           padding: 100px;
           background-color: #f8f9fa; /* warna latar belakang */
@@ -36,33 +69,32 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top"> <!-- Added fixed-top class -->
         <div class="container-fluid">
             <a class="navbar-brand text-white" href="#">Perpustakaan</a>
-            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active text-white" aria-current="page" href="/home">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="available_books">Buku yg Tersedia</a>
+                        <a class="nav-link" href="available_books">Buku yg Tersedia</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="my_books">Buku Saya</a>
+                        <a class="nav-link" href="my_books">Buku Saya</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="datatransactions">Data Transaksi</a>
+                        <a class="nav-link" href="datatransactions">Data Transaksi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="book_register">Daftar Buku Baru</a>
+                        <a class="nav-link" href="book_register">Daftar Buku Baru</a>
                     </li>
                 </ul>
                 <div>
-                    <a class="nav-link text-white" href="login">Logout</a>
+                    <a class="nav-link" href="login">Logout</a>
                 </div>
             </div>
         </div>
@@ -77,7 +109,7 @@
           Selain menjadi tempat untuk membaca dan belajar, perpustakaan kami juga menjadi pusat komunitas, tempat di mana ide-ide bertemu, diskusi-diskusi berkembang, dan kecerdasan bersama tumbuh. Ikuti acara-acara spesial kami, bergabunglah dalam kelompok diskusi buku, atau manfaatkan layanan referensi kami untuk menjawab pertanyaan-pertanyaan Anda.
           
           Kami di sini untuk membantu Anda menemukan petualangan baru, mengejar impian, dan menyalakan cahaya pengetahuan di dalam diri Anda. Selamat menikmati pengalaman membaca dan belajar di Perpustakaan Online kami!</h6>
-        <img src="/images/bg.png" width="360px"/>
+        <img src="/images/bg.png" width="100px"/>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
