@@ -36,8 +36,33 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             color: #000;
         }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to right, rgba(0, 123, 255, 0.7), rgba(0, 123, 255, 0.3)), url('https://source.unsplash.com/1600x900/?books,library');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding-top: 60px; /* Added padding-top to create space for navbar */
+        }
         .navbar-custom {
             background-color: #20B2AA; /* Teal Blue color */
+        }
+        .navbar-custom .nav-link {
+            color: white; /* Ensuring the navbar link text is white */
+        }
+        .navbar-custom .nav-link.active {
+            color: white; /* Ensuring the active navbar link text is also white */
+        }
+        .table-custom {
+            background-color: white; /* Set background color for the entire table */
+            color: black; /* Set text color for better readability */
         }
         .table-custom th {
             background-color: #20B2AA;
@@ -57,35 +82,36 @@
             margin-right: 10px;
         }
     </style>
+    
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
+
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top"> <!-- Added fixed-top class -->
         <div class="container-fluid">
             <a class="navbar-brand text-white" href="#">Perpustakaan</a>
-            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active text-white" aria-current="page" href="/home">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="available_books">Buku yg Tersedia</a>
+                        <a class="nav-link" href="available_books">Buku yg Tersedia</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="my_books">Buku Saya</a>
+                        <a class="nav-link" href="my_books">Buku Saya</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="datatransactions">Data Transaksi</a>
+                        <a class="nav-link" href="datatransactions">Data Transaksi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="book_register">Daftar Buku Baru</a>
+                        <a class="nav-link" href="book_register">Daftar Buku Baru</a>
                     </li>
                 </ul>
                 <div>
-                    <a class="nav-link text-white" href="login">Logout</a>
+                    <a class="nav-link" href="login">Logout</a>
                 </div>
             </div>
         </div>

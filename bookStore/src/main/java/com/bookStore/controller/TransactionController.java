@@ -21,7 +21,7 @@ public class TransactionController {
     @PostMapping("/add")
     public String createTransaction(@ModelAttribute Transaction transaction) {
         transactionService.save(transaction);
-        return "redirect:/";
+        return "redirect:/home";
     }
     @GetMapping("/create")
     public String showCreateForm(Model model) {
