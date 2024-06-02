@@ -6,6 +6,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Create Transaction</title>
     <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(to right, rgba(0, 123, 255, 0.7), rgba(0, 123, 255, 0.3)), url('https://source.unsplash.com/1600x900/?books,library');
+            background-size: cover;
+            background-position: center;
+            color: #6c757d; /* Light gray color */
+            padding-top: 60px; /* Added padding-top to create space for navbar */
+        }
         .navbar-custom {
             background-color: #20B2AA; /* Warna biru tosca */
         }
@@ -13,17 +28,56 @@
             background-color: #20B2AA; /* Warna biru tosca */
             color: white;
         }
+        .form-container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 40rem;
+        }
     </style>
 </head>
 <body>
 
-    <div class="container my-5">
-        <div class="card mx-auto" style="width: 40rem;">
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">Perpustakaan</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="available_books">Buku yg Tersedia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="my_books">Buku Saya</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="datatransactions">Data Transaksi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="book_register">Daftar Buku Baru</a>
+                    </li>
+                </ul>
+                <div>
+                    <a class="nav-link text-white" href="login">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="form-container my-5">
+        <div class="card mx-auto" style="width: 100%;">
             <div class="card-header text-center card-header-custom">
                 <h4 class="text-white">Create Transaction</h4>
             </div>
             <div class="card-body">
-                <form class="col-md-12" th:action="@{/add}" method="post"> <!-- Perbaiki action di sini -->
+                <form class="col-md-12" th:action="@{/add}" method="post">
                     <div class="mb-3">
                         <label for="buyer_name" class="form-label">Buyer Name:</label>
                         <input type="text" class="form-control" id="buyer_name" name="buyer_name">
@@ -59,7 +113,7 @@
                     </div>
                     <div class="d-flex justify-content-between">
                         <input type="submit" class="btn btn-primary" value="Submit">
-                        <a href="/home" class="btn btn-secondary">Cancel</a> <!-- Button Cancel -->
+                        <a href="/home" class="btn btn-secondary">Cancel</a>
                     </div>
                 </form>
             </div>
